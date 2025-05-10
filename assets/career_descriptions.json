@@ -1,42 +1,322 @@
 {
-  "Data Scientist": "A data scientist uses data to create models that provide insights and predictions for businesses.",
-  "Frontend Developer": "A frontend developer builds the user interface and user experience for websites and applications.",
-  "Data Analyst": "A data analyst interprets and analyzes data to help organizations make data-driven decisions.",
-  "Marketing Manager": "A marketing manager is responsible for planning and executing marketing campaigns to promote products and services.",
-  "Accountant": "An accountant is responsible for managing financial records, preparing taxes, and ensuring financial compliance.",
-  "Electronics Engineer": "An electronics engineer designs and develops electronic systems, devices, and circuits.",
-  "AI Researcher": "An AI researcher works on developing new algorithms and models for artificial intelligence applications.",
-  "Business Analyst": "A business analyst works to identify business needs and solutions through data and process analysis.",
-  "Statistician": "A statistician uses mathematical models to collect, analyze, and interpret data for decision-making.",
-  "Mechanical Engineer": "A mechanical engineer designs and builds mechanical systems and devices, like engines or machines.",
-  "Electrical Engineer": "An electrical engineer designs, develops, and tests electrical equipment and systems.",
-  "Doctor": "A doctor diagnoses and treats medical conditions, focusing on the health and well-being of patients.",
-  "Dentist": "A dentist diagnoses and treats oral health issues, such as tooth decay and gum diseases.",
-  "Physiotherapist": "A physiotherapist helps patients recover from injuries through physical exercises and treatments.",
-  "Nurse": "A nurse provides patient care and supports doctors in diagnosing and treating medical conditions.",
-  "Lawyer": "A lawyer advises and represents clients in legal matters, including litigation, contracts, and disputes.",
-  "Content Writer": "A content writer creates written material for websites, blogs, articles, and marketing campaigns.",
-  "Graphic Designer": "A graphic designer creates visual concepts and designs for advertisements, websites, and branding.",
-  "Architect": "An architect designs buildings and structures, ensuring they are functional, aesthetic, and safe.",
-  "Agriculture Officer": "An agriculture officer oversees farming operations and works to improve crop production and sustainability.",
-  "Teacher": "A teacher educates students in a variety of subjects, helping them develop academic and life skills.",
-  "Computer Operator": "A computer operator manages and maintains the operations of computer systems and software.",
-  "Full Stack Developer": "A full stack developer works on both the front-end and back-end of web applications.",
-  "Cybersecurity Analyst": "A cybersecurity analyst protects an organization's computer systems and networks from cyber threats.",
-  "Hotel Manager": "A hotel manager oversees the daily operations of a hotel, ensuring guest satisfaction and business efficiency.",
-  "Chemist": "A chemist studies the properties and reactions of substances to create new compounds and materials.",
-  "Physicist": "A physicist researches and applies principles of physics to understand natural phenomena and develop technologies.",
-  "Biologist": "A biologist studies living organisms and their interactions with the environment.",
-  "Pharmacist": "A pharmacist prepares and dispenses medications, ensuring proper usage and patient safety.",
-  "Chartered Accountant": "A chartered accountant manages financial accounts, audits, and ensures compliance with financial regulations.",
-  "Company Secretary": "A company secretary ensures compliance with corporate laws and regulations, and manages corporate governance.",
-  "Cost Accountant": "A cost accountant analyzes the costs of production, helping companies optimize expenses and increase profitability.",
-  "Chip Design Engineer": "A chip design engineer designs and tests microchips used in electronic devices and systems.",
-  "Civil Engineer": "A civil engineer designs and supervises the construction of infrastructure projects like roads, bridges, and buildings.",
-  "Dietitian": "A dietitian advises individuals and organizations on healthy eating habits and nutrition plans.",
-  "Psychologist": "A psychologist studies mental processes and behavior and helps individuals manage mental health issues.",
-  "Historian": "A historian researches, analyzes, and interprets past events and trends to understand human history.",
-  "Geologist": "A geologist studies the Earth's materials and processes, such as rocks, minerals, and natural resources.",
-  "UI/UX Designer": "A UI/UX designer creates user interfaces and user experiences for digital products to improve usability.",
-  "Animator": "An animator creates visual effects, animations, and special effects for movies, television, and games."
+  "Data Analyst": {
+    "description": "Analyzes data using statistical tools and helps businesses make data-driven decisions.",
+    "courses": [
+      "Google Data Analytics (Coursera)",
+      "SQL for Data Science",
+      "Power BI Essentials"
+    ]
+  },
+  "Web Developer": {
+    "description": "Builds responsive and interactive websites using HTML, CSS, JavaScript, and frontend frameworks.",
+    "courses": [
+      "HTML, CSS, JavaScript (FreeCodeCamp)",
+      "Full-Stack Web Dev (Coursera)",
+      "React Front-to-Back (Udemy)"
+    ]
+  },
+  "AI Engineer": {
+    "description": "Designs and develops artificial intelligence systems using machine learning and deep learning techniques.",
+    "courses": [
+      "AI for Everyone (Coursera)",
+      "Deep Learning Specialization (Andrew Ng)",
+      "Machine Learning with Python (IBM)"
+    ]
+  },
+  "Business Analyst": {
+    "description": "Identifies business needs and provides data-driven solutions using analytical tools.",
+    "courses": [
+      "Business Analytics with Excel",
+      "Tableau A-Z (Udemy)",
+      "Power BI Data Analyst Associate"
+    ]
+  },
+  "Accountant": {
+    "description": "Manages financial records, handles audits, and ensures regulatory compliance.",
+    "courses": [
+      "Tally Prime for Beginners",
+      "Accounting Fundamentals",
+      "QuickBooks Online Training"
+    ]
+  },
+  "Electronics Engineer": {
+    "description": "Designs, develops, and tests electronic systems and embedded devices.",
+    "courses": [
+      "VLSI Design (NPTEL)",
+      "Embedded Systems (Coursera)",
+      "Digital Electronics (Udemy)"
+    ]
+  },
+  "Mechanical Engineer": {
+    "description": "Applies principles of mechanics and energy to design machines and mechanical systems.",
+    "courses": [
+      "SolidWorks Masterclass",
+      "AutoCAD for Mechanical",
+      "Thermodynamics Essentials"
+    ]
+  },
+  "Architect": {
+    "description": "Plans, designs, and oversees the construction of buildings and structures.",
+    "courses": [
+      "AutoCAD Architecture",
+      "Basics of Architectural Design",
+      "SketchUp for Beginners"
+    ]
+  },
+  "Graphic Designer": {
+    "description": "Creates visual content using design software for branding, ads, and digital platforms.",
+    "courses": [
+      "Graphic Design Masterclass",
+      "Adobe Illustrator for Beginners",
+      "Photoshop Essentials"
+    ]
+  },
+  "Nurse": {
+    "description": "Provides healthcare support, administers medication, and cares for patients.",
+    "courses": [
+      "Basic Nursing Skills",
+      "Patient Care and Hygiene",
+      "Nursing Procedures 101"
+    ]
+  },
+  "Physiotherapist": {
+    "description": "Treats patients to improve their physical movement and manage pain.",
+    "courses": [
+      "Physiotherapy Techniques",
+      "Exercise Therapy",
+      "Human Anatomy Basics"
+    ]
+  },
+  "Dietitian": {
+    "description": "Advises individuals on food, nutrition, and healthy eating habits.",
+    "courses": [
+      "Nutrition and Lifestyle in Pregnancy",
+      "Human Nutrition (edX)",
+      "Introduction to Dietetics"
+    ]
+  },
+  "Animator": {
+    "description": "Creates animations and visual effects for videos, games, and films.",
+    "courses": [
+      "2D Animation Basics",
+      "Blender for Beginners",
+      "Adobe After Effects Training"
+    ]
+  },
+  "Biologist": {
+    "description": "Studies living organisms and conducts research to understand biological processes.",
+    "courses": [
+      "Molecular Biology Basics",
+      "Genetics 101",
+      "Introduction to Botany"
+    ]
+  },
+  "Chemist": {
+    "description": "Conducts chemical experiments to develop new products and substances.",
+    "courses": [
+      "Organic Chemistry Crash Course",
+      "Lab Safety Essentials",
+      "Inorganic Chemistry (Khan Academy)"
+    ]
+  },
+  "Chartered Accountant": {
+    "description": "Specializes in auditing, taxation, and financial management.",
+    "courses": [
+      "CA Foundation Course",
+      "Taxation for Beginners",
+      "Financial Accounting (edX)"
+    ]
+  },
+  "Geologist": {
+    "description": "Studies Earth's structure, materials, and processes like earthquakes or mining.",
+    "courses": [
+      "Geology 101",
+      "Remote Sensing and GIS",
+      "Earth Sciences Basics"
+    ]
+  },
+  "Psychologist": {
+    "description": "Studies human behavior and helps clients with mental health and well-being.",
+    "courses": [
+      "Introduction to Psychology (Coursera)",
+      "Mental Health and Wellness",
+      "Cognitive Behavioral Therapy"
+    ]
+  },
+  "Lawyer": {
+    "description": "Provides legal counsel and represents clients in court or legal matters.",
+    "courses": [
+      "Legal Writing and Drafting",
+      "Indian Constitution Course",
+      "Criminal Law Basics"
+    ]
+  },
+  "UI/UX Designer": {
+    "description": "Designs user interfaces and improves digital experiences through usability testing.",
+    "courses": [
+      "UI/UX Design with Figma",
+      "Design Thinking Basics",
+      "Human-Computer Interaction"
+    ]
+  },
+   "Software Developer": {
+    "description": "Designs, develops, and maintains software applications using programming languages.",
+    "courses": [
+      "Java Programming Masterclass",
+      "Python for Everybody",
+      "Software Development Lifecycle"
+    ]
+  },
+  "Full Stack Developer": {
+    "description": "Works on both the front-end and back-end of web applications.",
+    "courses": [
+      "Full-Stack Web Developer Nanodegree",
+      "MERN Stack Mastery",
+      "Django & React Full-Stack"
+    ]
+  },
+  "Cybersecurity Analyst": {
+    "description": "Protects systems and networks from cyber threats and vulnerabilities.",
+    "courses": [
+      "Cybersecurity Fundamentals (IBM)",
+      "Network Security Basics",
+      "Ethical Hacking Essentials"
+    ]
+  },
+  "Doctor": {
+    "description": "Diagnoses and treats illnesses while promoting patient health and wellness.",
+    "courses": [
+      "Basic Clinical Skills",
+      "First Aid Training",
+      "Human Anatomy and Physiology"
+    ]
+  },
+  "Dentist": {
+    "description": "Specializes in oral health, including teeth, gums, and related areas.",
+    "courses": [
+      "Introduction to Dentistry",
+      "Oral Surgery Basics",
+      "Dental Anatomy"
+    ]
+  },
+  "Pharmacist": {
+    "description": "Prepares and dispenses medications, providing advice on proper drug use.",
+    "courses": [
+      "Pharmacy Technician Certification",
+      "Clinical Pharmacology",
+      "Pharmaceutical Chemistry"
+    ]
+  },
+  "Teacher": {
+    "description": "Educates students at various levels and designs curriculum plans.",
+    "courses": [
+      "B.Ed Teaching Pedagogy",
+      "21st Century Teaching Skills",
+      "Educational Psychology"
+    ]
+  },
+  "Civil Engineer": {
+    "description": "Plans, designs, and oversees construction of infrastructure projects.",
+    "courses": [
+      "AutoCAD Civil 3D",
+      "Construction Management",
+      "Surveying and Geomatics"
+    ]
+  },
+  "Statistician": {
+    "description": "Applies statistical methods to analyze data and solve real-world problems.",
+    "courses": [
+      "R Programming",
+      "Advanced Statistics (Khan Academy)",
+      "Excel for Data Analysis"
+    ]
+  },
+  "Historian": {
+    "description": "Researches, studies, and interprets historical documents and sources.",
+    "courses": [
+      "Introduction to History Research",
+      "World History",
+      "Historiography"
+    ]
+  },
+  "Company Secretary": {
+    "description": "Manages legal, regulatory, and compliance affairs within an organization.",
+    "courses": [
+      "CS Executive Programme",
+      "Corporate Governance",
+      "Business Law"
+    ]
+  },
+  "Cost Accountant": {
+    "description": "Focuses on budgeting, cost control, and financial planning.",
+    "courses": [
+      "Cost Accounting (edX)",
+      "Financial Planning for Managers",
+      "CMA Foundation Training"
+    ]
+  },
+  "Software Tester": {
+    "description": "Ensures software quality through manual and automated testing methods.",
+    "courses": [
+      "Selenium WebDriver with Java",
+      "Software QA Testing Bootcamp",
+      "Manual Testing Fundamentals"
+    ]
+  },
+  "Interior Designer": {
+    "description": "Designs aesthetically pleasing and functional indoor spaces.",
+    "courses": [
+      "Interior Design Basics",
+      "AutoCAD for Interiors",
+      "Color Theory for Design"
+    ]
+  },
+  "Hotel Manager": {
+    "description": "Manages hotel operations, staff, and guest services.",
+    "courses": [
+      "Hotel Management Fundamentals",
+      "Hospitality Service Excellence",
+      "Customer Experience Design"
+    ]
+  },
+  "Economist": {
+    "description": "Studies the economy and suggests financial and policy solutions.",
+    "courses": [
+      "Economics for Managers",
+      "Macroeconomics Explained",
+      "Economic Policy Analysis"
+    ]
+  },
+  "Digital Marketer": {
+    "description": "Promotes brands online using SEO, content marketing, and paid ads.",
+    "courses": [
+      "Digital Marketing Masterclass",
+      "Google Ads Certification",
+      "SEO Training Course"
+    ]
+  },
+  "Content Writer": {
+    "description": "Writes engaging articles, blogs, and digital content for various platforms.",
+    "courses": [
+      "Content Writing Mastery",
+      "SEO Writing Basics",
+      "Creative Writing for Beginners"
+    ]
+  },
+  "HR Manager": {
+    "description": "Oversees recruitment, employee relations, and HR compliance.",
+    "courses": [
+      "Human Resource Management",
+      "Recruitment & Talent Acquisition",
+      "Organizational Behavior"
+    ]
+  },
+  "Blockchain Developer": {
+    "description": "Develops decentralized applications and smart contracts using blockchain tech.",
+    "courses": [
+      "Blockchain Basics (Coursera)",
+      "Ethereum and Solidity",
+      "Decentralized App Development"
+    ]
+  }
 }
