@@ -19,7 +19,9 @@ def predict_career(qualification, skills):
         input_text = qualification.strip() + " " + skills.strip()  # Combine inputs
         input_vector = vectorizer.transform([input_text])           # Vectorize input
         prediction = model.predict(input_vector)[0]                 # Predict career
-        prediction_proba = model.predict_proba(input_vector).max()  # Get top confidence
+        prediction_proba = model.predict_proba(input_vector).max()  # Get top confidence score (0–1)
+
+        confidence_percent = round(prediction_proba * 100, 2)       # Convert to 0–100%
 
         # Get career description and course suggestions
         info = career_descriptions.get(prediction, {})
@@ -31,7 +33,7 @@ def predict_career(qualification, skills):
         result = (
             f"🎯 **Predicted Career:** {prediction}\n\n"
             f"📝 **Description:** {description}\n\n"
-            f"📊 **Confidence:** {prediction_proba:.2%}\n\n"
+            f"📊 **Confidence:** {confidence_percent}%\n\n"
             f"🎓 **Suggested Courses:**\n{course_list}"
         )
         return result

@@ -1,38 +1,37 @@
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
-from sklearn.pipeline import Pipeline
 import joblib
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import classification_report
 
-# Load the cleaned dataset
+# Load cleaned data
 df = pd.read_csv("career_data_cleaned.csv")
 
-# Combine qualification and skills into one input text field
-df['input'] = df['qualification'].astype(str) + ' ' + df['skills'].astype(str)
+# Combine qualification and skills into one text feature
+df["input_text"] = df["qualification"].astype(str) + " " + df["skills"].astype(str)
+X = df["input_text"]
+y = df["career"]
 
-# Define features and target
-X = df['input']
-y = df['career']
+# Convert text to numerical vectors using TF-IDF with bi-grams
+vectorizer = TfidfVectorizer(ngram_range=(1, 2))
+X_vectorized = vectorizer.fit_transform(X)
 
-# Split the dataset
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Split into train and test
+X_train, X_test, y_train, y_test = train_test_split(
+    X_vectorized, y, test_size=0.2, random_state=42
+)
 
-# Create TF-IDF vectorizer
-vectorizer = TfidfVectorizer()
+# Train Random Forest Classifier
+model = RandomForestClassifier(n_estimators=200, random_state=42)
+model.fit(X_train, y_train)
 
-# Transform input data
-X_train_vectorized = vectorizer.fit_transform(X_train)
-X_test_vectorized = vectorizer.transform(X_test)
+# Evaluate the model
+y_pred = model.predict(X_test)
+print("✅ Model Evaluation Report:\n")
+print(classification_report(y_test, y_pred))
 
-# Train a classifier
-model = LogisticRegression()
-model.fit(X_train_vectorized, y_train)
-
-# Save the model and vectorizer
+# Save the trained model and vectorizer
 joblib.dump(model, "career_model.pkl")
 joblib.dump(vectorizer, "vectorizer.pkl")
-
-# Optional: Evaluate
-score = model.score(X_test_vectorized, y_test)
-print(f"✅ Model trained successfully. Accuracy: {score:.2f}")
+print("✅ Model and vectorizer saved as career_model.pkl and vectorizer.pkl")

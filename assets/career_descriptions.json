@@ -47,6 +47,14 @@
       "Digital Electronics (Udemy)"
     ]
   },
+"Frontend Developer": {
+  "description": "Specializes in building responsive and interactive user interfaces for web applications.",
+  "courses": [
+    "HTML, CSS, JavaScript (FreeCodeCamp)",
+    "Modern JavaScript from the Beginning (Udemy)",
+    "React - The Complete Guide (Udemy)"
+  ]
+},
   "Mechanical Engineer": {
     "description": "Applies principles of mechanics and energy to design machines and mechanical systems.",
     "courses": [
