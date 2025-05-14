@@ -78,5 +78,6 @@ NumPy
 
 Author
 Dasari Dilip Sai
-LinkedIn • GitHub
+LinkedIn • GitHub![ai project](https://github.com/user-attachments/assets/827a6be4-c31b-418e-a486-7868a5a553d2)
+
 
